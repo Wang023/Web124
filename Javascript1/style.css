@@ -178,6 +178,7 @@ body.dark .main-link:hover,
 
 #toggle-theme:hover {
   background-color: rgb(4, 31, 82);
+  cursor: pointer;
 }
 
 body.dark #toggle-theme {
