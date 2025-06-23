@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gana Sehaki">
+  <title>Featured Follow Along Nav</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Gana Sehaki 06/22/2025 -->
+  <!-- Adapted from https://javascript30.com/JavaScript  -->
+  <!-- 
+      - Added <main> and 5 <section> blocks: #home, #status, #tweets, #history, #contact
+      - Each section has a <h2> title
+      - Each section uses class="wrapper(I changed its position) section(additional)" for layout and spacing
+      - Added <footer> for copyright with a class named "footer"
+      - Added a Dark/Light mode toggle button with an Id (toggle-theme)
+
+      - Nav links now point to actual section IDs
+      - Added class="nav-link" to each nav <a> for targeting
+      - <nav> / <button> now includes aria-label="Primary navigation" / aria-label="Toggle theme" for accessibility for screen readers
+      - Added class="dark" when needed usin JavaScript to the body for dark mode
+
+      - Text links inside <p> have class="main-link"
+      - Added .section { padding: 2rem } to give scroll spacing
+      - The class ""nav-link" link text become bigger on hover (Scale)
+
+      - We target only .nav-link (not every <a>)
+      - highlight <span> is positioned with JS + a 'hovering' class added
+      - JS moved to external file: script.js
+
+      - HTML comments for credit and structure
+      - Clean and scalable structure and easy to expand later
+  -->
+</head>
+<body>
+  <!-- Dark mode button -->
+  <button id="toggle-theme" class="btn btn-outline-secondary" aria-label="Toggle theme">
+    <i class="bi bi-moon-fill" id="theme-icon"></i>
+  </button>
+
+  <!-- Navigation bar with semantic label -->
+  <nav aria-label="Primary navigation">
+    <ul class="menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#status" class="nav-link">Order Status</a></li>
+      <li><a href="#tweets" class="nav-link">Tweets</a></li>
+      <li><a href="#history" class="nav-link">Read Our History</a></li>
+      <li><a href="#contact" class="nav-link">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN content with sections -->
+  <main>
+
+    <!-- Added 5 new sections with IDs-->
+
+    <!-- HOME -->
+    <section id="home" class="wrapper section">
+      <h2>Home</h2>
+      <p>Lorem ipsum dolor sit amet, <a href="#" class="main-link">consectetur</a> adipisicing elit. Est <a href="#" class="main-link">explicabo</a> unde natus necessitatibus esse obcaecati distinctio, aut itaque, qui vitae!</p>
+      <p>Aspernatur sapiente quae sint <a href="#" class="main-link">soluta</a> modi, atque praesentium laborum pariatur earum <a href="#" class="main-link">quaerat</a> cupiditate consequuntur facilis ullam dignissimos, aperiam quam veniam.</p>
+      <p>Cum ipsam quod, incidunt sit ex <a href="#" class="main-link">tempore</a> placeat maxime <a href="#" class="main-link">corrupti</a> possimus <a href="#" class="main-link">veritatis</a> ipsum fugit recusandae est doloremque? Hic, <a href="#" class="main-link">quibusdam</a>, nulla.</p>
+    </section>
+
+    <!-- ORDER STATUS -->
+    <section id="status" class="wrapper section">
+      <h2>Order Status</h2>
+      <p>Esse quibusdam, ad, ducimus cupiditate <a href="#" class="main-link">nulla</a>, quae magni odit <a href="#" class="main-link">totam</a> ut consequatur eveniet sunt quam provident sapiente dicta neque quod.</p>
+      <p>Aliquam <a href="#" class="main-link">dicta</a> sequi culpa fugiat <a href="#" class="main-link">consequuntur</a> pariatur optio ad minima, maxime <a href="#" class="main-link">odio</a>, distinctio magni impedit tempore enim repellendus <a href="#" class="main-link">repudiandae</a> quas!</p>
+      <p>Lorem ipsum dolor sit amet, <a href="#" class="main-link">consectetur</a> adipisicing elit…</p>
+    </section>
+
+    <!-- TWEETS -->
+    <section id="tweets" class="wrapper section">
+      <h2>Tweets</h2>
+      <p>Aspernatur sapiente quae sint <a href="#" class="main-link">soluta</a> modi, atque praesentium laborum pariatur earum <a href="#" class="main-link">quaerat</a> cupiditate consequuntur facilis ullam dignissimos.</p>
+      <p>Cum ipsam quod, incidunt sit ex <a href="#" class="main-link">tempore</a> placeat maxime <a href="#" class="main-link">corrupti</a> possimus <a href="#" class="main-link">veritatis</a> ipsum fugit recusandae.</p>
+      <p>Esse quibusdam, ad, ducimus cupiditate <a href="#" class="main-link">nulla</a>…</p>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="wrapper section">
+      <h2>Our History</h2>
+      <p>Lorem ipsum dolor sit amet, <a href="#" class="main-link">consectetur</a> adipisicing elit. Est <a href="#" class="main-link">explicabo</a> unde natus necessitatibus esse obcaecati…</p>
+      <p>Aliquam <a href="#" class="main-link">dicta</a> sequi culpa fugiat…</p>
+      <p>Aspernatur sapiente quae sint <a href="#" class="main-link">soluta</a> modi…</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrapper section">
+      <h2>Contact Us</h2>
+      <p>Cum ipsam quod, incidunt sit ex <a href="#" class="main-link">tempore</a> placeat maxime <a href="#" class="main-link">corrupti</a> possimus <a href="#" class="main-link">veritatis</a>.</p>
+      <p>Esse quibusdam, ad, ducimus cupiditate <a href="#" class="main-link">nulla</a>, quae magni odit <a href="#" class="main-link">totam</a>.</p>
+      <p>Aliquam <a href="#" class="main-link">dicta</a> sequi culpa fugiat <a href="#" class="main-link">consequuntur</a>…</p>
+    </section>
+
+  </main>
+
+  <!-- Adding a footer -->
+  <footer class="wrapper footer">
+  <p>&copy; 2025 Gana Sehaki. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for dynamic highlight effect on nav links -->
+  <script src="script.js"></script>
+
+</body>
+</html>
