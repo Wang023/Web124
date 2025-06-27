@@ -6,7 +6,7 @@ console.log("Full Name:", fullName);
 
 // variable to store my desired annual salary
 let desiredAnnualSalary = 120000;
-console.log("Desired Annual Salary:", desiredAnnualSalary);
+console.log("Desired Annual Salary:", desiredAnnualSalary, "$");
 
 // variable to store my veteran status (boolean)
 let veteranStatus = false;
