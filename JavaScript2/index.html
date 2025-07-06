@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Nav</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/" />
+  <!-- Gana Sehaki 07/05/2025 -->
+  <!-- Adapted from https://javascript30.com/JavaScript  -->
+  <!-- 
+      - Renamed <nav id="main"> to <nav id="navbar"> for clarity.
+      - Updated links to use fragment identifiers (#home, ...).
+      - Added class "nav-link" to target wanted links.
+      - Navbar links now point to actual section IDs
+      - A modern link hover.
+      - A modern box shadow for the navbar
+
+      - Replaced <div class="site-wrap"> with <main class="site-wrap"> for better semantic.
+      - Introduced a main title: <h2 class="title">How to not get lost ?</h2>
+
+      - Devided main content into clearly defined <section> blocks with ids: #home #about #images #locations #maps
+      - Each section now has its own <h2> heading for better structure and accessibility.
+      - Smooth scrolling
+
+      - Replaced static unsplash.it images with random ones using ?random
+      - Placed all <img> in #images section inside a <div class="images-grid"> for a modern grid layout
+
+      - Added a Google Maps <iframe> with JCCC location.
+
+      -Added a footer for copyright.
+
+      - Added a highlight for the current loaded section (also on the scroll) using javascript to toggle the .active  class
+      - Moved JavaScript code to an external file.
+
+      - HTML comments for credit and structure
+      - Clean and scalable structure and easy to expand later
+  -->
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>A story about getting lost.</h1>
+  </header>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <ul>
+      <li class="logo"><a href="#">LOST.</a></li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#images" class="nav-link">Images</a></li>
+      <li><a href="#locations" class="nav-link">Locations</a></li>
+      <li><a href="#maps" class="nav-link">Maps</a></li>
+    </ul>
+  </nav>
+  <!-- MAIN CONTENT -->
+  <main class="site-wrap"> 
+    <h2 class="title">How to not get lost ?</h2>
+    <!-- HOME -->
+    <section id="home">
+      <h2>Home</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+    </section>
+
+    <!-- IMAGES -->
+    <section id="images">
+      <h2>Images</h2>
+      <div class="images-grid">
+        <img src="http://unsplash.it/400/400?random=1" alt="Sample" class="align-left slide-in">
+        <img src="http://unsplash.it/400/400?random=2" alt="Sample" class="align-right slide-in">
+        <img src="http://unsplash.it/400/400?random=3" alt="Sample" class="align-right slide-in">
+        <img src="http://unsplash.it/400/400?random=4" alt="Sample" class="align-right slide-in">
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates deserunt facilis et iste corrupti …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section id="locations">
+      <h2>Locations</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+    </section>
+
+    <!-- MAPS -->
+    <section id="maps">
+      <h2>Maps</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores adipisci quibusdam …</p>
+
+      <!-- Embedded Google Map placeholder -->
+      <iframe
+        title="JCCC Map"
+        width="100%"
+        height="300"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.2491790612775!2d-94.73435028465367!3d38.92249937956257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f9e4341c8a05%3A0x672f7f962041121!2sJohnson%20County%20Community%20College!5e0!3m2!1sen!2sus!4v1650907751453!5m2!1sen!2sus">
+      </iframe>
+    </section>
+  </main>
+
+  <!-- Adding a footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Gana Sehaki. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript link -->
+  <script src="script.js"></script>
+
+
+</body>
+</html>

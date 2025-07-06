@@ -1,0 +1,185 @@
+/* Gana Sehaki 07/05/2025 */
+/* Box-sizing for consistent layout */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* to have a smooth scrolling */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Body style */
+body {
+  background: #d1e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
+}
+
+header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: #414a4c;
+  font-size: 2.5em;
+}
+
+h2{
+  color: #414a4c;
+  margin-bottom: 1em;
+}
+
+/* NAVBAR */
+
+nav {
+  background: #f5f7fa;
+  top: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+body.fixed-nav nav {
+  position: sticky;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
+/* Nav link style */
+
+li.logo a {
+  color: #414a4c;
+  transition: all ease-in-out .2s;
+  -webkit-transition: all ease-in-out .2s;
+  -moz-transition: all ease-in-out .2s;
+  -ms-transition: all ease-in-out .2s;
+  -o-transition: all ease-in-out .2s;
+}
+
+li.logo a:hover{
+  color: #78a9a9;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: #414a4c;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+/* link animation */
+
+nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;  
+  width: 0;                  
+  height: 2px;
+  background: #414a4c;               
+  transition: width 0.3s ease;
+}
+
+nav .nav-link:hover::after,
+nav .nav-link:focus-visible::after {
+  width: 100%;
+}
+
+/* active link style  */
+.nav-link.active {
+  color: #414a4c;         
+  font-weight: 600;      
+}
+
+
+/* Content wrapper */
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  background: #fff;
+  padding: 40px;
+  margin-top: 5em;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+  line-height: 1.7; /* line height for better readability */
+}
+
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
+.title{
+  font-size: 2em;
+  text-align: center;
+}
+
+/* SECTIONS */
+
+section{
+  margin: 4em auto;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+/* grid layout */
+.images-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 2em;
+}
+
+/* footer */
+.footer{
+  background-color: #f5f7fa;
+  color: #414a4c;
+  text-align: center;
+  font-size: .9em;
+  padding: 1em;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.05);
+}
