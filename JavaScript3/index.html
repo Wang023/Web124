@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type Ahead</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/"/>
+  <!-- Gana Sehaki 07/12/2025 -->
+  <!-- Adapted from https://javascript30.com/JavaScript  -->
+  <!-- 
+      - Added semantic structure: <header>, <main>, <footer>
+      - A modern design.
+      - A modern box shadow for the form.
+      - Inserted <h1> title in header: Start Typing... We'll Do the Finding.
+      - Updated placeholder text in input.
+      - Added .search-select section to show selected cities.
+      - Display alert when no result is found.
+      - Prevent selecting the same city twice.
+      - Added a footer for copyright.
+      - Moved JavaScript code to an external file.
+      - HTML comments for structure.
+      - Clean and scalable structure and easy to expand later.
+  -->
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1>Start Typing... We'll Do the Finding</h1>
+  </header>
+  <!-- main -->
+  <main class="main">
+    <form class="search-form">
+      <input type="text" class="search" placeholder="Type a City or State">
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <div class="search-select">
+      <p>You will see any selected cities below</p>
+        <ul class="selected-cities">
+        </ul>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Gana Sehaki Type2Find</p>
+  </footer>
+
+  <!-- js link -->
+   <script src="script.js"></script>
+  </body>
+</html>
