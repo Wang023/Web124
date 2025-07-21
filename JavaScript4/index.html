@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clean Nav</title>
+  <link rel="icon" href="https://fav.farm/" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Gana Sehaki 07/20/2025 -->
+  <!-- Adapted from https://javascript30.com/JavaScript  -->
+  <!-- 
+  - Introduced semantic HTML structure: <header>, <main>, <footer>.
+  - Improved accessibility with adding alt attributes like aria-label for navigation.
+  - Clean and scalable layout easier to expand with sections like "calm-section".
+
+  - Switched to Google Font 'Outfit' for modern, clean look.
+  - Soft color palette and tones.
+  - Created a CSS :root with variables (colors, shadow...) for theme control.
+
+  - Used modern box shadows and rounded borders across elements.
+  - Applied hover and transition effects on nav links, buttons, and dropdowns.
+  - Responsive enhancements: flex-wrap, better spacing, and max-width limits.
+
+  - Clean dropdown animation.
+  - Better visual separation of sections with margin and spacing.
+
+  - Made `accentColor`variable  dynamically changeable with the buttons of theme changer.
+
+  - Added a section "Discover Calm Learning" with an image + Call To Action.
+  
+  - Moveed JS to an external file.
+  - Improved responsiveness and flexibility.
+  - Added theme switcher: change accent color on-the-fly (orange, green, purple).
+
+  - Added a footer with social links styled.
+
+-->
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h2>Welcome to My Clean Nav</h2>
+  </header>
+  <!-- navbar -->
+  <nav class="top" aria-label="Main navigation">
+    <div class="dropdownBackground"></div>
+    <ul class="cool">
+      <li>
+        <a href="#">About Me</a>
+        <div class="dropdown dropdown1">
+          <div class="bio">
+            <img src="https://logo.clearbit.com/wesbos.com" alt="Wes Bos">
+            <p>Wes Bos loves web development and teaching JavaScript, CSS... and BBQ.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">Courses</a>
+        <ul class="dropdown courses" role="menu">
+          <li><span class="code">RFB</span><a href="https://ReactForBeginners.com">React For Beginners</a></li>
+          <li><span class="code">ES6</span><a href="https://ES6.io">ES6 For Everyone</a></li>
+          <li><span class="code">NODE</span><a href="https://LearnNode.com">Learn Node</a></li>
+          <li><span class="code">GRID</span><a href="https://CSSGrid.io">CSS Grid</a></li>
+          <li><span class="code">LRX</span><a href="http://LearnRedux.com">Learn Redux</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Other Links</a>
+        <ul class="dropdown dropdown3" role="menu">
+          <li><a class="button" href="http://twitter.com/wesbos">Twitter</a></li>
+          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
+          <li><a class="button" href="http://wesbos.com">Blog</a></li>
+          <li><a class="button" href="http://wesbos.com/courses">Courses</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Change theme</a>
+        <ul class="dropdown dropdown3" role="menu">
+            <li>
+                <button class="click-button orange" onclick="setAccentColor('#ff5722')">Orange Accent </button>
+            </li>
+            <li>
+                <button class="click-button green" onclick="setAccentColor('#4caf50')">Green Accent</button>
+            </li>
+            <li>
+                <button class="click-button purple" onclick="setAccentColor('#6a1b9a')">Purple Accent</button>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- main content -->
+  <main>
+    <section class="calm-section">
+    <div class="container">
+        <div class="content">
+        <h2>Discover Calm Learning</h2>
+        <p>Welcome to a smooth and focused environment where knowledge flows effortlessly. Everything is designed to help you concentrate, breathe, and grow at your own pace.</p>
+        <a href="#" class="button">Get Started</a>
+        </div>
+        <div class="image">
+            <img src="http://unsplash.it/400/400?nature" alt="nature image">
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Follow Along Nav. All rights reserved.</p>
+    <div class="social">
+      <a href="http://twitter.com" class="button">Twitter</a>
+      <a href="http://facebook.com" class="button">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JS link -->
+ <script src="script.js"></script>
+</body>
+</html>

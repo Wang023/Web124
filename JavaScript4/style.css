@@ -1,0 +1,268 @@
+:root {
+--bg: #f2f6f9;
+--nav-bg: #ffffffcc;
+--accent: #6c63ff;
+--text: #333;
+--highlight: #eef2f7;
+--shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Outfit', sans-serif;
+background: var(--bg);
+color: var(--text);
+min-height: 100vh;
+}
+
+h2 {
+text-align: center;
+padding: 2rem 1rem;
+font-weight: 600;
+color: #444;
+}
+
+nav.top {
+position: relative;
+background: var(--nav-bg);
+backdrop-filter: blur(8px);
+box-shadow: var(--shadow);
+padding: 1rem 2rem;
+border-radius: 12px;
+margin: 0 auto;
+max-width: 1000px;
+}
+
+ul.cool {
+display: flex;
+justify-content: center;
+gap: 2rem;
+list-style: none;
+flex-wrap: wrap;
+}
+
+.cool > li {
+position: relative;
+}
+
+.cool > li > a {
+font-size: 1rem;
+text-decoration: none;
+color: var(--text);
+padding: 0.6rem 1rem;
+border-radius: 8px;
+transition: background 0.3s ease;
+}
+
+.cool > li > a:hover {
+background: var(--highlight);
+}
+
+.dropdown {
+position: absolute;
+top: 100%;
+left: 0;
+background: white;
+border-radius: 10px;
+padding: 1rem;
+box-shadow: var(--shadow);
+transform: translateY(20px);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s ease;
+min-width: 260px;
+z-index: 999;
+margin-top: .7em;
+}
+
+.trigger-enter .dropdown {
+display: block;
+pointer-events: auto;
+}
+
+.trigger-enter-active .dropdown {
+opacity: 1;
+transform: translateY(0);
+}
+
+.dropdownBackground {
+position: absolute;
+background: var(--accent);
+border-radius: 10px;
+box-shadow: var(--shadow);
+transition: all 0.3s ease;
+opacity: 0;
+transform: translateY(20px);
+z-index: 10;
+}
+
+.dropdownBackground.open {
+opacity: .4;
+transform: translateY(0);
+}
+
+.bio {
+display: flex;
+gap: 1rem;
+align-items: center;
+line-height: 1.5;
+color: #666;
+}
+
+.bio img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.courses li,
+.dropdown3 li {
+padding: 0.5rem 0;
+border-bottom: 1px solid #eee;
+display: flex;
+gap: 0.5rem;
+align-items: center;
+}
+
+.code {
+font-weight: 600;
+color: var(--accent);
+font-size: 0.85rem;
+}
+
+.dropdown a {
+text-decoration: none;
+color: #666;
+}
+
+.dropdown.courses li{
+padding: .5em 1.5em;
+}
+
+.dropdown.courses li:hover{
+background-color: #eef2f7;
+}
+
+a.button {
+display: inline-block;
+background: #eee;
+color: #444;
+padding: 0.6rem 1rem;
+margin-top: 0.5rem;
+border-radius: 6px;
+text-align: center;
+text-decoration: none;
+transition: all .3s ease;
+}
+
+.button[href*="twitter"] { 
+background: #252627; 
+color: #f1f6f9; 
+}
+
+.button[href*="facebook"] { 
+background: #e9eefc; 
+color: #4267B2; 
+}
+
+.button[href*="courses"] { 
+background: #fdf4e3; 
+color: #e0a800; 
+}
+.click-button{
+padding: .5em 1.5em;
+border: 1px solid var(--text);
+background-color: var(--bg);
+color: var(--text);
+transition: all .3s ease;
+-webkit-transition: all .3s ease;
+-moz-transition: all .3s ease;
+-ms-transition: all .3s ease;
+-o-transition: all .3s ease;
+}
+.click-button.orange:hover{
+background-color: #ff5722;
+color: var(--highlight);
+}
+.click-button.green:hover{
+background-color: #4caf50;
+color: var(--highlight);
+}
+.click-button.purple:hover{
+background-color: #6a1b9a;
+
+color: var(--highlight);
+}
+
+.calm-section {
+background: white;
+padding: 4rem 2rem;
+border-radius: 1rem;
+max-width: 1000px;
+margin: 2rem auto;
+box-shadow: var(--shadow);
+}
+
+.calm-section .container {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+}
+
+.calm-section .content {
+flex: 1 1 400px;
+max-width: 500px;
+}
+
+.calm-section .content h2 {
+font-size: 2rem;
+color: var(--accent);
+margin-bottom: 1rem;
+}
+
+.calm-section .content p {
+font-size: 1.1rem;
+color: #555;
+line-height: 1.6;
+}
+
+.calm-section .image img {
+width: 100%;
+border-radius: 12px;
+box-shadow: var(--shadow);
+object-fit: cover;
+}
+
+.calm-section .button:hover{
+    background-color: var(--accent);
+    color: var(--highlight);
+}
+
+.footer {
+background: var(--nav-bg);
+padding: 2rem;
+margin-top: 4rem;
+text-align: center;
+color: #777;
+border-top: 1px solid #ccc;
+}
+
+.footer-container {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.footer .social {
+margin-top: 1rem;
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
