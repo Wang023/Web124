@@ -156,7 +156,9 @@ h2 {
   -ms-transition: all .2s ease;
   -o-transition: all .2s ease;
 }
-
+.add-items input:hover {
+  border-color: var(--accent-color);
+}
 .add-items input:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2);
