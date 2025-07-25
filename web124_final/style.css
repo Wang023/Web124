@@ -1,0 +1,108 @@
+/* style.css */ 
+
+:root{
+    --bg : #f9f9f9;
+    --blue : 	#0d6bcf;
+    --light-blue : #e7f2fc;
+    --gray : #5c6570;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    padding: .5em 2em;
+}
+header{
+    padding: 1.5em;
+}
+header h1{
+    color: var(--blue);
+}
+main{
+    background-color: var(--light-blue);
+    padding: 2em;
+    color: var(--gray);
+}
+.inputFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.inputFlex input{
+    height: 2em;
+    border: 1px solid var(--blue);
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    -ms-border-radius: .3em;
+    -o-border-radius: .3em;
+}
+.inputFlex input:focus{
+    outline: none;
+    box-shadow: 2px 2px 8px rgba(26, 75, 190, 0.1);
+}
+.inputFlex input:hover{
+    box-shadow: 2px 2px 8px rgba(26, 75, 190, 0.1);
+}
+.inputFlex button{
+    background-color: var(--blue);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid var(--blue);
+    padding: .5em;
+    border-radius: .2em;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    -ms-border-radius: .2em;
+    -o-border-radius: .2em;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+.inputFlex button:hover{
+    background-color: #fff;
+    color: var(--blue);
+    cursor: pointer;
+}
+.results{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+.results .res{
+    background-color: var(--bg);
+    padding: 1em;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .1);
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+}
+
+footer{
+    margin-top: 12em;
+    padding: 2em;
+    text-align: center;
+    color: var(--gray);
+}
+
+/* medium screen */
+@media (max-width : 768px) {
+    .results{
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+/* small screen */
+@media (max-width : 576px) {
+    .results{
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
